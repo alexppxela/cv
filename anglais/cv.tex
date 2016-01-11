@@ -1,0 +1,88 @@
+%% cv.tex --- Example of CurVe usage.
+
+%% Copyright (C) 2000-2003 Didier Verna.
+
+%% PRCS: $Id: cv.tex,v 1.8 2005-09-21 22:31:35 pepe Exp $
+
+%% Author:        Didier Verna <didier@lrde.epita.fr>
+%% Maintainer:    Didier Verna <didier@lrde.epita.fr>
+%% Created:       Thu Dec 10 16:04:01 2000
+%% Last Revision: Tue Mar 27 10:21:32 2001
+
+%% This file is part of CurVe.
+
+%% CurVe may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.1
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%% http://www.latex-project.org/lppl.txt
+%% and version 1.1 or later is part of all distributions of LaTeX
+%% version 1999/06/01 or later.
+
+%% CurVe consists of the files listed in the file `README'.
+
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper]{curve}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{geometry}
+
+
+%% \geometry{hmargin=2.0cm, vmargin=1.5cm}
+\geometry{hmargin=0.5cm, vmargin=0.7cm}
+\makeatletter
+\def\@rubrichead#1{%
+  \multicolumn{3}{@{}c}{%
+    \@rubricfont%
+%%    \makebox[0pt][l]{\colorbox[rgb]{0.31,0.42,0.73}{\makebox[\@almosttextwidth]{}}}%
+    \makebox[0pt][l]{\colorbox[rgb]{0.51,0.62,0.83}{\makebox[\@almosttextwidth]{}}}%
+    \makebox[\@almosttextwidth][c]{#1}\par\vspace{\rubricspace}}\\}
+\renewcommand\subrubric[1]{%
+  \@nextentry
+  \gdef\@nextentry{}%
+  &\multicolumn{2}{l}{%
+    \raisebox{\@beforespace}{\@subrubricfont%
+      \makebox[1ex][l]{\colorbox[gray]{0.7}{\textcolor[blue]{0.7}{M}}}#1}%
+    \par\vspace{\subrubricspace}}\\}
+\makeatother
+
+\leftheader{
+  Alexandre THIBAULT\\
+  19, rue des sablons 77590 Chartrettes}
+\rightheader{
+  Cellular: +33 (0)6 89 97 11 32\\
+  e-mail: alexandre.thibault@happycoders.org}
+%%\rightheader{Nationality: French\\
+%%  Born 26 december 1981\\
+%%  Marital status: single}
+
+
+\title{Software Engineer}
+\subtitle{Expert Software Engineer and Architect}
+%%\subtitle{Artificial Intelligence Specialization}
+
+\begin{document}
+
+%%\makeheaders[t]
+\makeheaders
+\maketitle
+
+\vspace{-20pt}\
+\makerubric{experiences}
+
+\vspace{-20pt}\
+\makerubric{formation}
+
+%\vspace{-20pt}\
+%\makerubric{connaissances}
+
+\vspace{-20pt}\
+\makerubric{divers}
+
+\end{document}
+
+%% cv.tex ends here.
