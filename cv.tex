@@ -43,14 +43,14 @@
 %           compris entre 0 et 1 inclu.
 
 %% \geometry{hmargin=2.0cm, vmargin=1.5cm}
-\geometry{hmargin=0.5cm, vmargin=0.7cm}
+\geometry{hmargin=0.5cm, vmargin=0.5cm}
 \makeatletter
 \def\@rubrichead#1{%
   \multicolumn{3}{@{}c}{%
     \@rubricfont%
 %%    \makebox[0pt][l]{\colorbox[rgb]{0.31,0.42,0.73}{\makebox[\@almosttextwidth]{}}}%
     \makebox[0pt][l]{\colorbox[rgb]{0.51,0.62,0.83}{\makebox[\@almosttextwidth]{}}}%
-    \makebox[\@almosttextwidth][c]{#1}\par\vspace{\rubricspace}}\\}
+    \makebox[\@almosttextwidth][c]{#1}\par\vspace{\rubricspace\vspace{-10pt}}}\\}
 \renewcommand\subrubric[1]{%
   \@nextentry
   \gdef\@nextentry{}%
@@ -59,15 +59,6 @@
       \makebox[1ex][l]{\colorbox[gray]{0.7}{\textcolor[blue]{0.7}{M}}}#1}%
     \par\vspace{\subrubricspace}}\\}
 \makeatother
-
-%% \leftheader{Alexandre THIBAULT\\
-%%   19, rue des sablons 77590 Chartrettes\\
-%%   Portable: 06-89-97-11-32\\
-%%   e-mail: alexandre.thibault@happycoders.org}
-%% \rightheader{Nationalité française\\
-%%   Né le 26 décembre 1981\\
-%%   Marié}
-
 
 \leftheader{
   Alexandre THIBAULT\\
@@ -79,7 +70,6 @@
 
 \title{Ingénieur en informatique}
 \subtitle{Architecte et analyste développeur}
-%%\subtitle{Diplômé de l'EPITA - Mention Très bien}
 
 \begin{document}
 %\definecolor{beige}{cmyk}{0.05,0.05,0.2,0}
@@ -93,9 +83,6 @@
 
 \vspace{-20pt}\
 \makerubric{formation}
-
-%vspace{-20pt}\
-%\makerubric{connaissances}
 
 \vspace{-20pt}\
 \makerubric{divers}

@@ -32,15 +32,13 @@
 \usepackage{geometry}
 
 
-%% \geometry{hmargin=2.0cm, vmargin=1.5cm}
-\geometry{hmargin=0.5cm, vmargin=0.7cm}
+\geometry{hmargin=0.5cm, vmargin=0.5cm}
 \makeatletter
 \def\@rubrichead#1{%
   \multicolumn{3}{@{}c}{%
     \@rubricfont%
-%%    \makebox[0pt][l]{\colorbox[rgb]{0.31,0.42,0.73}{\makebox[\@almosttextwidth]{}}}%
     \makebox[0pt][l]{\colorbox[rgb]{0.51,0.62,0.83}{\makebox[\@almosttextwidth]{}}}%
-    \makebox[\@almosttextwidth][c]{#1}\par\vspace{\rubricspace}}\\}
+    \makebox[\@almosttextwidth][c]{#1}\par\vspace{\rubricspace\vspace{-10pt}}}\\}
 \renewcommand\subrubric[1]{%
   \@nextentry
   \gdef\@nextentry{}%
@@ -56,18 +54,12 @@
 \rightheader{
   Cellular: +33 (0)6 89 97 11 32\\
   e-mail: alexandre.thibault@happycoders.org}
-%%\rightheader{Nationality: French\\
-%%  Born 26 december 1981\\
-%%  Marital status: single}
-
 
 \title{Software Engineer}
 \subtitle{Expert Software Engineer and Architect}
-%%\subtitle{Artificial Intelligence Specialization}
 
 \begin{document}
 
-%%\makeheaders[t]
 \makeheaders
 \maketitle
 
@@ -76,9 +68,6 @@
 
 \vspace{-20pt}\
 \makerubric{formation}
-
-%\vspace{-20pt}\
-%\makerubric{connaissances}
 
 \vspace{-20pt}\
 \makerubric{divers}
